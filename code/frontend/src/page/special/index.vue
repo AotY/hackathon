@@ -1,14 +1,21 @@
 <template>
   <div class="special">
-    <div class="container">
+    <!-- <div class="container">
       <no-loop-swiper :Items="Items" class="special-no-loop"></no-loop-swiper>
       <each-suggest :suggests="suggests"></each-suggest>
-    </div>
+    </div> -->
+    <Heads>
+    </Heads>
+    <ChatList>
+    </ChatList>
     <v-footer class="footer"></v-footer>
   </div>
 </template>
 
 <script>
+import Heads from "@/components/public/Heads";
+import ChatList from "@/components/public/ChatList";
+
 import data from "@/fetch/api";
 import Footer from "@/components/public/Footer";
 import noloopswiper from "@/components/public/NoLoopSwiper";
@@ -36,10 +43,10 @@ export default {
     });
     this.$Loading.start();
     this.$store.dispatch("changeActive", 1);
-    data.getTypeDesc('specials').then(res => {
-      this.suggests = res
-      console.log('res', res)
-    })
+    data.getTypeDesc("specials").then(res => {
+      this.suggests = res;
+      console.log("res", res);
+    });
   },
   mounted() {
     this.$Loading.finish();
@@ -56,12 +63,15 @@ export default {
   components: {
     "v-footer": Footer,
     "no-loop-swiper": noloopswiper,
-    eachSuggest
+    eachSuggest,
+    Heads,
+    ChatList
   }
 };
 </script>
 
 <style scoped>
+@import "../../../node_modules/font-awesome/css/font-awesome.min.css";
 .container {
   margin-bottom: 1.30667rem;
 }
