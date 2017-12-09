@@ -3,6 +3,8 @@ package com.xjtu.pojo;
 import java.util.Date;
 
 public class Evaluation {
+    private Integer id;
+
     private Integer fromuserid;
 
     private Integer touserid;
@@ -21,7 +23,8 @@ public class Evaluation {
 
     private Date updatetime;
 
-    public Evaluation(Integer fromuserid, Integer touserid, String evaluationlabel, String evaluationtext, Float rating, String mainimage, String subimages, Date createtime, Date updatetime) {
+    public Evaluation(Integer id, Integer fromuserid, Integer touserid, String evaluationlabel, String evaluationtext, Float rating, String mainimage, String subimages, Date createtime, Date updatetime) {
+        this.id = id;
         this.fromuserid = fromuserid;
         this.touserid = touserid;
         this.evaluationlabel = evaluationlabel;
@@ -35,6 +38,14 @@ public class Evaluation {
 
     public Evaluation() {
         super();
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public Integer getFromuserid() {

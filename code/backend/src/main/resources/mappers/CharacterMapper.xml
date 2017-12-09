@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.xjtu.dao.KeywordMapper">
-  <resultMap id="BaseResultMap" type="com.xjtu.pojo.Keyword">
+<mapper namespace="com.xjtu.dao.CharacterMapper">
+  <resultMap id="BaseResultMap" type="com.xjtu.pojo.Character">
     <constructor>
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
-      <arg column="keyword" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="count" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="label" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="type" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
       <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
-    id, keyword, count, createTime, updateTime
+    id, label, type, createTime, updateTime
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from keyword
+    from character
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from keyword
+    delete from character
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.xjtu.pojo.Keyword">
-    insert into keyword (id, keyword, count, 
+  <insert id="insert" parameterType="com.xjtu.pojo.Character">
+    insert into character (id, label, type, 
       createTime, updateTime)
-    values (#{id,jdbcType=INTEGER}, #{keyword,jdbcType=VARCHAR}, #{count,jdbcType=INTEGER}, 
-      now(), now())
+    values (#{id,jdbcType=INTEGER}, #{label,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="com.xjtu.pojo.Keyword">
-    insert into keyword
+  <insert id="insertSelective" parameterType="com.xjtu.pojo.Character">
+    insert into character
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
       </if>
-      <if test="keyword != null">
-        keyword,
+      <if test="label != null">
+        label,
       </if>
-      <if test="count != null">
-        count,
+      <if test="type != null">
+        type,
       </if>
       <if test="createtime != null">
         createTime,
@@ -52,51 +52,51 @@
       <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="keyword != null">
-        #{keyword,jdbcType=VARCHAR},
+      <if test="label != null">
+        #{label,jdbcType=VARCHAR},
       </if>
-      <if test="count != null">
-        #{count,jdbcType=INTEGER},
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
       </if>
       <if test="createtime != null">
         #{createtime,jdbcType=TIMESTAMP},
       </if>
       <if test="updatetime != null">
-        now(),
+        #{updatetime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.xjtu.pojo.Keyword">
-    update keyword
+  <update id="updateByPrimaryKeySelective" parameterType="com.xjtu.pojo.Character">
+    update character
     <set>
-      <if test="keyword != null">
-        keyword = #{keyword,jdbcType=VARCHAR},
+      <if test="label != null">
+        label = #{label,jdbcType=VARCHAR},
       </if>
-      <if test="count != null">
-        count = #{count,jdbcType=INTEGER},
+      <if test="type != null">
+        type = #{type,jdbcType=VARCHAR},
       </if>
       <if test="createtime != null">
         createTime = #{createtime,jdbcType=TIMESTAMP},
       </if>
       <if test="updatetime != null">
-        updateTime = now(),
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.xjtu.pojo.Keyword">
-    update keyword
-    set keyword = #{keyword,jdbcType=VARCHAR},
-      count = #{count,jdbcType=INTEGER},
+  <update id="updateByPrimaryKey" parameterType="com.xjtu.pojo.Character">
+    update character
+    set label = #{label,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
       createTime = #{createtime,jdbcType=TIMESTAMP},
-      updateTime = now()
+      updateTime = #{updatetime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
-  <select id="selectByLimit" resultType="String" parameterType="Integer">
-    SELECT
-    keyword
-    FROM keyword
-    ORDER BY (count) DESC LIMIT #{count}
+  <select id="getList" resultType="String" parameterType="String">
+    select
+    label
+    from `character`
+    where type = #{type}
   </select>
 </mapper>

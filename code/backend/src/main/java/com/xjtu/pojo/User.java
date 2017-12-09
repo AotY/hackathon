@@ -35,6 +35,8 @@ public class User {
 
     private String language;
 
+    private String place;
+
     private String travel;
 
     private String book;
@@ -57,7 +59,7 @@ public class User {
 
     private Date updatetime;
 
-    public User(Integer id, String username, String mainimage, String subimages, String sex, Integer age, String hometown, String industry, Integer online, Integer guide, Float longitude, Float latitude, Integer guidecount, Float rating, String personality, String language, String travel, String book, String movie, String music, String food, String sport, String password, String phone, String device, Date createtime, Date updatetime) {
+    public User(Integer id, String username, String mainimage, String subimages, String sex, Integer age, String hometown, String industry, Integer online, Integer guide, Float longitude, Float latitude, Integer guidecount, Float rating, String personality, String language, String place, String travel, String book, String movie, String music, String food, String sport, String password, String phone, String device, Date createtime, Date updatetime) {
         this.id = id;
         this.username = username;
         this.mainimage = mainimage;
@@ -74,6 +76,7 @@ public class User {
         this.rating = rating;
         this.personality = personality;
         this.language = language;
+        this.place = place;
         this.travel = travel;
         this.book = book;
         this.movie = movie;
@@ -217,6 +220,14 @@ public class User {
 
     public void setLanguage(String language) {
         this.language = language == null ? null : language.trim();
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place == null ? null : place.trim();
     }
 
     public String getTravel() {

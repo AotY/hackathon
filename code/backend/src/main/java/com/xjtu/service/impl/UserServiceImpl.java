@@ -51,15 +51,23 @@ public class UserServiceImpl implements IUserService {
             return ServerResponse.createByError(Const.USERNAME_OR_PASSWORD_ERROR);
         }
 
+        // 更新用户状态
+        user.setOnline(Const.ONLINE);
+//        userMapper.insertSelective(user);
+        User updateUser = new User();
+        updateUser.setId(user.getId());
+        updateUser.setOnline(Const.ONLINE);
+        userMapper.updateByPrimaryKeySelective(updateUser);
+
         // 不要返回密码
         user.setPassword(StringUtils.EMPTY);
-        user.setOnline(Const.ONLINE);
 
         return ServerResponse.createBySuccess(user);
     }
 
 
     /**
+     * 注册
      * @param user
      */
     public ServerResponse register(User user) {
@@ -68,6 +76,7 @@ public class UserServiceImpl implements IUserService {
         }
 
         ServerResponse validResponse = null;
+
         // 检查手机号和用户名是否已经存在
         validResponse = this.checkValid(user.getPhone(), Const.PHONE);
         if (validResponse.getStatus() != 0) {
@@ -77,6 +86,7 @@ public class UserServiceImpl implements IUserService {
         if (validResponse.getStatus() != 0) {
             return validResponse;
         }
+
         // 验证密码
         validResponse = this.checkValid(user.getPassword(), Const.PASSWORD);
         if (validResponse.getStatus() != 0) {
@@ -86,8 +96,37 @@ public class UserServiceImpl implements IUserService {
         // 密码加密
         user.setPassword(MD5Util.MD5EncodeUTF8(user.getPassword()));
 
-//        int affectedRows = userMapper.insert(user);
-        int affectedRows = userMapper.insertSelective(user);
+        if (user.getHometown() == null) {
+            user.setHometown("西安");
+        }
+        if (user.getIndustry() == null) {
+            user.setIndustry("学生");
+        }
+
+        if (user.getLongitude() == null) {
+            user.setLongitude((float) 109.134);
+        }
+
+        if (user.getLatitude() == null) {
+            user.setLatitude((float) 34.3912);
+        }
+
+        if (user.getGuidecount() == null) {
+            user.setGuidecount(0);
+        }
+
+        if (user.getRating() == null) {
+            user.setRating((float) 0.0);
+        }
+
+        if (user.getDevice() == null) {
+            user.setDevice("iphone 6s");
+        }
+        user.setOnline(Const.OFFLINE);
+        user.setGuide(Const.NO_GUIDE);
+
+//        int affectedRows = userMapper.insertSelective(user);
+        int affectedRows = userMapper.insert(user);
         if (affectedRows > 0) {
             return ServerResponse.createBySuccess(Const.REGISTER_SUCCESS);
         }
@@ -117,13 +156,53 @@ public class UserServiceImpl implements IUserService {
     }
 
 
-
+    /**
+     * 设置当前用户为向导
+     * @param user
+     * @return
+     */
     public ServerResponse setGuide(User user){
+        User updateUser = new User();
+        updateUser.setId(user.getId());
+        updateUser.setGuide(Const.GUIDE);
+        int affectedRows = userMapper.updateByPrimaryKeySelective(updateUser);
+
+        // 不要返回密码
         user.setGuide(Const.GUIDE);
-        int affectedRows = userMapper.insertSelective(user);
+        user.setPassword(StringUtils.EMPTY);
+
         if (affectedRows > 0) {
-            return ServerResponse.createBySuccess(Const.SET_SUCCESS);
+            return ServerResponse.createBySuccess(Const.SET_SUCCESS, user);
         }
-        return ServerResponse.createByError(Const.SET_FAILED);
+        return ServerResponse.createByError(Const.SET_FAILED, null);
+    }
+
+    /**
+     * 更新用户数据
+     * @param user
+     * @return
+     */
+    @Override
+    public ServerResponse update(User user) {
+        return null;
+    }
+
+    /*
+
+    退出登录
+     */
+    @Override
+    public ServerResponse logout(User user) {
+        User updateUser = new User();
+        updateUser.setId(user.getId());
+        updateUser.setOnline(Const.OFFLINE);
+        updateUser.setGuide(Const.NO_GUIDE);
+        int affectedRows = userMapper.updateByPrimaryKeySelective(updateUser);
+
+        if (affectedRows > 0) {
+            return ServerResponse.createBySuccess();
+        }
+        return ServerResponse.createByError();
+
     }
 }

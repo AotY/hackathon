@@ -17,4 +17,9 @@ public interface IUserService {
     public ServerResponse checkValid(String value, String filed);
 
     public ServerResponse setGuide(User user);
+
+    public ServerResponse update(User user);
+
+    public ServerResponse logout(User user);
+
 }

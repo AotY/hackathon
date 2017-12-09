@@ -46,14 +46,40 @@ public class UserController {
     @RequestMapping(value = "logout.do", method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse logout(HttpSession session) {
+        User user = (User) session.getAttribute(Const.CURRENT_USER);
+        if (user == null) {
+            return ServerResponse.createByError(ResponseCode.NEED_LOGIN.getCode(), ResponseCode.NEED_LOGIN.getDesc());
+        }
+        iUserService.logout(user);
         session.removeAttribute(Const.CURRENT_USER);
         return ServerResponse.createBySuccess();
     }
 
+    /**
+     * 用户注册
+     * @param user
+     * @return
+     */
     @RequestMapping(value = "register.do", method = RequestMethod.POST)
     @ResponseBody
     public ServerResponse register(User user) {
         return iUserService.register(user);
+    }
+
+
+    /**
+     * 更新用户数据 (主要是更新用户特点数据）
+     * @param user
+     * @return
+     */
+    @RequestMapping(value = "update.do", method = RequestMethod.POST)
+    @ResponseBody
+    public ServerResponse update(User user, HttpSession session) {
+        ServerResponse serverResponse = iUserService.update(user);
+        if (serverResponse.isSuccess()) {
+            session.setAttribute(Const.CURRENT_USER, serverResponse.getData());
+        }
+        return ServerResponse.createBySuccess(serverResponse.getData());
     }
 
 
@@ -87,7 +113,7 @@ public class UserController {
 
 
     /**
-     * 设置当前用户向导
+     * 设置当前用户为向导
      * @param session
      * @return
      */
@@ -99,7 +125,12 @@ public class UserController {
             return ServerResponse.createByError(ResponseCode.NEED_LOGIN.getCode(), ResponseCode.NEED_LOGIN.getDesc());
         }
 
-        return iUserService.setGuide(user);
+        ServerResponse serverResponse = iUserService.setGuide(user);
+        if (serverResponse.isSuccess()) {
+            session.setAttribute(Const.CURRENT_USER, serverResponse.getData());
+        }
+
+        return ServerResponse.createBySuccess(serverResponse.getData());
     }
 
 }

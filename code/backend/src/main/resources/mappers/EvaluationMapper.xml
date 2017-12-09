@@ -3,6 +3,7 @@
 <mapper namespace="com.xjtu.dao.EvaluationMapper">
   <resultMap id="BaseResultMap" type="com.xjtu.pojo.Evaluation">
     <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="fromUserId" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="toUserId" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="evaluationLabel" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -14,19 +15,35 @@
       <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
+  <sql id="Base_Column_List">
+    id, fromUserId, toUserId, evaluationLabel, evaluationText, rating, mainImage, subImages, 
+    createTime, updateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from evaluation
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from evaluation
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
   <insert id="insert" parameterType="com.xjtu.pojo.Evaluation">
-    insert into evaluation (fromUserId, toUserId, evaluationLabel, 
-      evaluationText, rating, mainImage, 
-      subImages, createTime, updateTime
-      )
-    values (#{fromuserid,jdbcType=INTEGER}, #{touserid,jdbcType=INTEGER}, #{evaluationlabel,jdbcType=VARCHAR}, 
-      #{evaluationtext,jdbcType=VARCHAR}, #{rating,jdbcType=REAL}, #{mainimage,jdbcType=VARCHAR}, 
-      #{subimages,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
-      )
+    insert into evaluation (id, fromUserId, toUserId, 
+      evaluationLabel, evaluationText, rating, 
+      mainImage, subImages, createTime, 
+      updateTime)
+    values (#{id,jdbcType=INTEGER}, #{fromuserid,jdbcType=INTEGER}, #{touserid,jdbcType=INTEGER}, 
+      #{evaluationlabel,jdbcType=VARCHAR}, #{evaluationtext,jdbcType=VARCHAR}, #{rating,jdbcType=REAL}, 
+      #{mainimage,jdbcType=VARCHAR}, #{subimages,jdbcType=VARCHAR}, now(), now())
   </insert>
   <insert id="insertSelective" parameterType="com.xjtu.pojo.Evaluation">
     insert into evaluation
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
       <if test="fromuserid != null">
         fromUserId,
       </if>
@@ -56,6 +73,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
       <if test="fromuserid != null">
         #{fromuserid,jdbcType=INTEGER},
       </if>
@@ -78,11 +98,57 @@
         #{subimages,jdbcType=VARCHAR},
       </if>
       <if test="createtime != null">
-        #{createtime,jdbcType=TIMESTAMP},
+        now(),
       </if>
       <if test="updatetime != null">
-        #{updatetime,jdbcType=TIMESTAMP},
+        now(),
       </if>
     </trim>
   </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xjtu.pojo.Evaluation">
+    update evaluation
+    <set>
+      <if test="fromuserid != null">
+        fromUserId = #{fromuserid,jdbcType=INTEGER},
+      </if>
+      <if test="touserid != null">
+        toUserId = #{touserid,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationlabel != null">
+        evaluationLabel = #{evaluationlabel,jdbcType=VARCHAR},
+      </if>
+      <if test="evaluationtext != null">
+        evaluationText = #{evaluationtext,jdbcType=VARCHAR},
+      </if>
+      <if test="rating != null">
+        rating = #{rating,jdbcType=REAL},
+      </if>
+      <if test="mainimage != null">
+        mainImage = #{mainimage,jdbcType=VARCHAR},
+      </if>
+      <if test="subimages != null">
+        subImages = #{subimages,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = now(),
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xjtu.pojo.Evaluation">
+    update evaluation
+    set fromUserId = #{fromuserid,jdbcType=INTEGER},
+      toUserId = #{touserid,jdbcType=INTEGER},
+      evaluationLabel = #{evaluationlabel,jdbcType=VARCHAR},
+      evaluationText = #{evaluationtext,jdbcType=VARCHAR},
+      rating = #{rating,jdbcType=REAL},
+      mainImage = #{mainimage,jdbcType=VARCHAR},
+      subImages = #{subimages,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = now()
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>
