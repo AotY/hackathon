@@ -4,7 +4,7 @@ img{
   height: 100%;
 }
 
-.swiper-pagination .swiper-pagination-bullet {
+/* .swiper-pagination .swiper-pagination-bullet {
   width: .53333rem;
     height: .05333rem;
     display: inline-block;
@@ -17,7 +17,7 @@ img{
 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
     background: #fff;
-}
+} */
 .u-icon-servicePolicy-index {
     display: inline-block;
     vertical-align: middle;
@@ -198,7 +198,7 @@ img{
 /*滑动*/
 #newItems{
   background-color: #fff;
-    
+
 }
 .recommend-no-loop{
 margin-bottom: .42667rem;

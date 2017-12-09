@@ -15,23 +15,37 @@
 
 <script>
 export default {
-  props: ['Items'],
-  data () {
+  props: ["Items"],
+  data() {
     return {
       ItemsOption: {
-        slidesPerView: 2.5,
-        spaceBetween: 8
+        // slidesPerView: 2.5,
+        // spaceBetween: 8
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-.special{
+.special {
   /*background-color: #fff;*/
 }
-.special-no-loop .swiper-slide img{
-  border-radius: .10667rem;
+.special-no-loop .swiper-slide img {
+  border-radius: 0.10667rem;
 }
 </style>

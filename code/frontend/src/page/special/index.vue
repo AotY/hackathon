@@ -9,66 +9,73 @@
 </template>
 
 <script>
-import data from '@/fetch/api'
-import Footer from '@/components/public/Footer'
-import noloopswiper from '@/components/public/NoLoopSwiper'
-import eachSuggest from '@/components/public/EachSuggest'
+import data from "@/fetch/api";
+import Footer from "@/components/public/Footer";
+import noloopswiper from "@/components/public/NoLoopSwiper";
+import eachSuggest from "@/components/public/EachSuggest";
 export default {
-  name: 'index',
-  data () {
+  name: "index",
+  data() {
     return {
-      Items: [
-        {id: 0, src: 'https://yanxuan.nosdn.127.net/1de4da49367dd7c01af1f7a2b23b0237.jpg'},
-        {id: 1, src: 'https://yanxuan.nosdn.127.net/14939888168151095.png'},
-        {id: 2, src: 'https://yanxuan.nosdn.127.net/dc1b671ad54e16339f1b26cfeec6a1ea.jpg'},
-        {id: 3, src: 'https://yanxuan.nosdn.127.net/d943675462a06f817d33062d4eb059f5.jpg'}
-      ],
+      // Items: [
+      //   {id: 0, src: 'https://yanxuan.nosdn.127.net/1de4da49367dd7c01af1f7a2b23b0237.jpg'},
+      //   {id: 1, src: 'https://yanxuan.nosdn.127.net/14939888168151095.png'},
+      //   {id: 2, src: 'https://yanxuan.nosdn.127.net/dc1b671ad54e16339f1b26cfeec6a1ea.jpg'},
+      //   {id: 3, src: 'https://yanxuan.nosdn.127.net/d943675462a06f817d33062d4eb059f5.jpg'}
+      // ],
       suggests: []
-    }
+    };
   },
-  created () {
+  created() {
+    this.$store.dispatch("getInfos", "carousel.do");
+
     this.$Loading.config({
-      color: '#b4282d',
-      failedColor: '#f0ad4e',
+      color: "#b4282d",
+      failedColor: "#f0ad4e",
       height: 3
-    })
-    this.$Loading.start()
-    this.$store.dispatch('changeActive', 1)
+    });
+    this.$Loading.start();
+    this.$store.dispatch("changeActive", 1);
     data.getTypeDesc('specials').then(res => {
       this.suggests = res
       console.log('res', res)
     })
   },
-  mounted () {
-    this.$Loading.finish()
+  mounted() {
+    this.$Loading.finish();
   },
   computed: {
+    Items() {
+      console.log("tset");
+      console.log("tset");
+      console.log("tset");
+
+      return this.$store.getters.infos;
+    }
   },
   components: {
-    'v-footer': Footer,
-    'no-loop-swiper': noloopswiper,
+    "v-footer": Footer,
+    "no-loop-swiper": noloopswiper,
     eachSuggest
   }
-}
+};
 </script>
 
 <style scoped>
-.container{
-  
-    margin-bottom: 1.30667rem;
+.container {
+  margin-bottom: 1.30667rem;
 }
-.swiper-container img{
-      width: 3.62667rem;
-    height: 2.02667rem;
-    border-radius: .10667rem;
+.swiper-container img {
+  width: 3.62667rem;
+  height: 2.02667rem;
+  border-radius: 0.10667rem;
 }
-.swiper-container .swiper-slide{
+.swiper-container .swiper-slide {
   margin-right: 0 !important;
 }
 .special-no-loop {
   background-color: #fff;
-  padding: .26667rem .4rem;
-      margin-bottom: .26667rem;
+  padding: 0.26667rem 0.4rem;
+  margin-bottom: 0.26667rem;
 }
-
 </style>

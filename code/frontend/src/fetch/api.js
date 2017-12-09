@@ -3,7 +3,7 @@ import axios from 'axios'
 axios.defaults.timeout = 5000
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 // axios.defaults.baseURL = 'http://neteaseyanxuan.leanapp.cn/'
-axios.defaults.baseURL = 'http://backend.hackathon.com/recommend/carousel.do'
+axios.defaults.baseURL = 'http://backend.hackathon.com/recommend'
 export function fetchPost (url, params = {}) {
   return new Promise((resolve, reject) => {
     axios.post(url, params).then(res => {

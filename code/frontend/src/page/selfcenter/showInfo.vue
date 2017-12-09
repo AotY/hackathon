@@ -63,6 +63,8 @@
 import data from "@/fetch/api";
 import Util from "../../util/common";
 import indexLabels from "@/components/public/Labels";
+import { Indicator } from 'mint-ui';
+
 export default {
   components: {
     indexLabels
@@ -76,6 +78,7 @@ export default {
     }
   },
   created() {
+    Indicator.open('加载中...')
     this.$store.dispatch('getInfos', 'carousel.do');
   },
   methods: {}
