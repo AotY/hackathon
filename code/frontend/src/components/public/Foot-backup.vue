@@ -149,13 +149,13 @@ export default {
     left: 0px;
     background-color: #F8F8F8;
   }
-  
+
   .foot .con {
     position: absolute;
     left: 40px;
     right: 40px;
   }
-  
+
   .foot .btn-plus {
     width: 30px;
     height: 30px;
@@ -164,12 +164,12 @@ export default {
     right: 0px;
     border-left: 1px solid #d9d9d9;
   }
-  
+
   .foot .btn-plus i {
     font-size: 2.2em;
     color: #ccc;
   }
-  
+
   .foot .btn-face {
     width: 30px;
     height: 30px;
@@ -178,26 +178,26 @@ export default {
     left: 0px;
     border-right: 1px solid #d9d9d9;
   }
-  
+
   .foot .btn-face i {
     font-size: 2.2em;
     color: #d9d9d9;
   }
-  
+
   .foot .selbox {
     height: 150px;
     margin-top: 48px;
     border-top: 1px solid #d9d9d9;
   }
-  
+
   .show {
     display: block;
   }
-  
+
   .hide {
     display: none;
   }
-  
+
   .face-box {
     /* position: absolute; */
     /* top: 48px; */
@@ -210,7 +210,7 @@ export default {
     margin: 0px auto;
     height: 135px;
   }
-  
+
   .face-box li {
     width: 30px;
     float: left;

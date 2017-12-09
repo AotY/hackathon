@@ -65,7 +65,7 @@ export default {
             }, {
                 type: 2,
                 time: util.formatDate.format(new Date(),'yyyy-MM-dd hh:mm:ss'),
-                name: '客户MM',
+                name: '专属导游',
                 content: '这里是西安'
             }],
             // 表情
@@ -246,8 +246,8 @@ export default {
                 }, {
                     type: 2,
                     time: util.formatDate.format(new Date(),'yyyy-MM-dd hh:mm:ss'),
-                    name: '客户MM',
-                    content: '这里是<a target="_blank" href="https://github.com/taylorchen709/vue-chat">源码</a>13213'
+                    name: '专属导游',
+                    content: '这里是西安'
                 });
 
                 setTimeout(function(){
@@ -283,7 +283,7 @@ export default {
     }
 
     .chatlist-bottom {
-        bottom: 48px;
+        bottom: 148px;
     }
 
     .chatlist-bottom-collapse {
@@ -416,7 +416,7 @@ export default {
         width: 100%;
         min-height: 48px;
         position: fixed;
-        bottom: 0px;
+        bottom: 50px;
         left: 0px;
         background-color: #F8F8F8;
     }
@@ -490,7 +490,7 @@ export default {
         display: inline-block;
         vertical-align: top;
         font-size: 14px;
-        line-height: 32px;
+        line-height: 44px;
         margin-left: 5px;
         padding: 0 6px;
         background-color: #33DF83;
@@ -501,6 +501,6 @@ export default {
     .btn-send {
         position: absolute;
         right: 0px;
-        top: 8px;
+        top: 2px;
     }
 </style>

@@ -7,7 +7,7 @@
          </i>
         <span class="txt" >{{item.name}}</span>
         </div>
-        
+
       </router-link>
   </nav>
 </template>
