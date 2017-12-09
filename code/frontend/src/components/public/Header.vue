@@ -5,7 +5,7 @@
       <router-link to="/search" class="m-topSearchIpt ipt" >
           <i class="icon" ></i>
           <span class="placeholder" >
-            <span >商品搜索, 共</span> <span >5116</span> <span >款好物</span>
+            <span >输入目的地，</span> <span ></span> <span >寻找你的专属向导。</span>
           </span>
       </router-link>
     </div>
@@ -35,6 +35,8 @@ export default {
 <style scoped>
 .header-container{
   background-color: #fff;
+  left: 0;
+  right: 0;
 }
 .line {
     display: flex;
@@ -52,7 +54,7 @@ export default {
 .line .logo {
     width: 1.84rem;
     height: .53333rem;
-    background-image: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexLogo-11d65342f9.png);
+    background-image: url('../../assets/logo.png');
     display: inline-block;
     margin-right: .26667rem;
     background-size: cover;
@@ -72,6 +74,7 @@ export default {
     background-color: #ededed;
     border-radius: .10667rem;
     text-decoration: none;
+    width: 100%;
 }
 .m-topSearchIpt .icon {
     vertical-align: middle;

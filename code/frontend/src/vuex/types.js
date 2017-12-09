@@ -36,4 +36,5 @@ export const SET_MYLIST = 'SET_MYLIST'
 export const CHANGE_STATUS = 'CHANGE_STATUS'
 //zbw
 export const SET_INFOS = 'SET_INFOS'
+export const SET_CARDS = 'SET_CARDS'
 

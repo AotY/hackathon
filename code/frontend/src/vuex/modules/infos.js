@@ -3,7 +3,8 @@ import * as types from '../types'
 import data from '@/fetch/api'
 
 const state = {
-  infos: []
+  infos: [],
+  cards: []
 }
 const actions = {
   getInfos({ commit }, type) {
@@ -13,6 +14,14 @@ const actions = {
       Indicator.close()
       commit(types.SET_INFOS, res)
     })
+  },
+  getCards({ commit }, type) {
+    console.log('type', type)
+    data.getTypeDesc(type).then(res => {
+      console.log('type data:', res)
+      Indicator.close()
+      commit(types.SET_CARDS, res)
+    })
   }
 }
 
@@ -21,7 +30,8 @@ const mutations = {
     const baseUrl = res.data.imageHost;
     const adapter = {
       src: 'image',
-      id: 'id'
+      id: 'id',
+      value: 'keyword'
     };
 
     state.infos = res.data.carousels.map(function (item) {
@@ -33,10 +43,17 @@ const mutations = {
       });
       return value;
     });
+  },
+  [types.SET_CARDS](state, res) {
+    state.cards = res.data.map(function (item) {
+      item.src = "http://image.hackathon.com/" + item.mainimage;
+      return item;
+    });
   }
 }
 const getters = {
-  infos: state => state.infos
+  infos: state => state.infos,
+  cards: state => state.cards
 }
 export default {
   state,

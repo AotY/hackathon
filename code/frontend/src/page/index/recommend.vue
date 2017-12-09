@@ -4,63 +4,23 @@
   <swiper :options="swiperOption">
       <swiper-slide v-for="slide in bannerList" :key="slide.id">
         <img :src="slide.src" alt="" class="picture">
+        <header class="state">
+         <span>{{slide.value}}</span>
+        </header>
       </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
     <div class="swiper-scrollbar"   slot="scrollbar"></div>
-    </swiper>
+  </swiper>
 
   </div>
-  <!-- <deal-promise></deal-promise>
+  <deal-promise></deal-promise>
 
   <div class="m-indexFloor">
-   <header class="hd">
-     <router-link to="/" class="more">
-       <span>品牌制造商直供</span><i class="u-icon u-icon-go2 icon"></i>
-     </router-link>
-    </header>
      <div class="m-indexManufacturersSupplying">
-       <ul class="list">
-         <li class="item">
-           <router-link to="/detail/indexPage/id/0">
-             <div class="cnt" >
-               <h4 class="title">MUJI制造商</h4>
-                <span class="price" >
-                  <span >12.9</span>
-                  <span >元起</span>
-               </span>
-              </div>
-              <img src="http://yanxuan.nosdn.127.net/e649b15c56d200bd1764c68d74fe85ff.png"  style="opacity: 1;">
-           </router-link >
-         </li>
-         <li class="item">
-           <router-link to="/detail/indexPage/id/1">
-           <div class="cnt" >
-               <h4 class="title">CK制造商</h4>
-                <span class="price" >
-                  <span >39</span>
-                  <span >元起</span>
-               </span>
-              </div>
-              <img src="http://yanxuan.nosdn.127.net/3fa19797fff2a356ee54926fb98648cc.jpg"  style="opacity: 1;">
-           </router-link>
-         </li>
-         <li class="item">
-           <router-link to="/detail/indexPage/id/2">
-           <div class="cnt" >
-               <h4 class="title">MUJI制造商</h4>
-                <span class="price" >
-                  <span >12.9</span>
-                  <span >元起</span>
-               </span>
-              </div>
-              <img src="http://yanxuan.nosdn.127.net/b8c3342e90c0c297e1a172cdff68b0d8.jpg"  style="opacity: 1;">
-           </router-link>
-         </li>
-       </ul>
+       <index-cards :cards="cards"></index-cards>
      </div>
- </div> -->
- <!--周一 周四 新品首发-->
+ </div>
  <!-- <div class="new-fast">
    <header class="hd">
      <router-link to="newfast" class="more">
@@ -75,9 +35,8 @@
    <ul>
   <no-loop-swiper :Items="newItems" class="recommend-no-loop"></no-loop-swiper>
    </ul>
- </div> -->
- <!--人气推荐-->
- <!-- <div class="peoplehot">
+ </div>
+ <div class="peoplehot">
    <div class="hottitle">
      <div>
       人气推荐<i data-v-1bc3f80e="" class="arrow-right"></i>
@@ -104,6 +63,7 @@ import noLoopSwiper from "@/components/public/NoLoopSwiper";
 import dealPromise from "@/components/public/DealPromise";
 import cell from "@/components/public/cell";
 import { Indicator } from "mint-ui";
+import indexCards from "@/components/public/Cards";
 
 export default {
   data() {
@@ -203,13 +163,17 @@ export default {
   computed: {
     bannerList() {
       return this.$store.getters.infos;
+    },
+    cards() {
+      return this.$store.getters.cards;
     }
   },
   beforeCreate() {},
   created() {
+    Indicator.open("加载中...");
     this.$store.dispatch("getInfos", "carousel.do");
     this.$store.dispatch("changeHeadertabActive", 0);
-    Indicator.open("加载中...");
+    this.$store.dispatch("getCards", "recommend_daodao.do");
   },
   mounted() {},
   components: {
@@ -218,7 +182,8 @@ export default {
     goodsGrid,
     noLoopSwiper,
     dealPromise,
-    cell
+    cell,
+    indexCards
   }
 };
 </script>
@@ -228,5 +193,13 @@ export default {
 .picture {
   width: 100%;
   height: 260px;
+}
+.state {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: top;
+    justify-content: center;
+    height: 1.46667rem;
+    font-size: .42667rem;
 }
 </style>

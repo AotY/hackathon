@@ -7,27 +7,27 @@ import * as types from '../types'
 const state = {
   headertabList: [
         {id: 0, name: '推荐', isActive: true, linkTo: '/recommend'},
-        {id: 1, name: '居家', isActive: false, linkTo: '/home'},
-        {id: 2, name: '餐厨', isActive: false, linkTo: '/cook'},
-        {id: 3, name: '配件', isActive: false, linkTo: '/parts'},
-        {id: 4, name: '服装', isActive: false, linkTo: '/cloth'},
-        {id: 5, name: '洗护', isActive: false, linkTo: '/wash'},
-        {id: 6, name: '婴童', isActive: false, linkTo: '/baby'},
-        {id: 7, name: '杂货', isActive: false, linkTo: '/messy'},
-        {id: 8, name: '饮食', isActive: false, linkTo: '/drink'},
-        {id: 9, name: '志趣', isActive: false, linkTo: '/hobby'}
+        // {id: 3, name: '   ', isActive: false, linkTo: '/parts'},
+        // {id: 2, name: '   ', isActive: false, linkTo: '/cook'},
+        // {id: 1, name: '   ', isActive: false, linkTo: '/home'},
+        // {id: 4, name: '   ', isActive: false, linkTo: '/cloth'},
+        // {id: 5, name: '   ', isActive: false, linkTo: '/wash'},
+        // {id: 6, name: '   ', isActive: false, linkTo: '/baby'},
+        // {id: 7, name: '   ', isActive: false, linkTo: '/messy'},
+        // {id: 8, name: '   ', isActive: false, linkTo: '/drink'},
+        // {id: 9, name: '   ', isActive: false, linkTo: '/hobby'}
   ],
   typesTabs: [
         {id: 0, name: '推荐', isActive: true, linkTo: '/type/'},
-        {id: 1, name: '居家', isActive: false, linkTo: '/type/home'},
-        {id: 2, name: '餐厨', isActive: false, linkTo: '/type/cook'},
-        {id: 3, name: '配件', isActive: false, linkTo: '/type/parts'},
-        {id: 4, name: '服装', isActive: false, linkTo: '/type/cloth'},
-        {id: 5, name: '洗护', isActive: false, linkTo: '/type/wash'},
-        {id: 6, name: '婴童', isActive: false, linkTo: '/type/baby'},
-        {id: 7, name: '杂货', isActive: false, linkTo: '/type/messy'},
-        {id: 8, name: '饮食', isActive: false, linkTo: '/type/drink'},
-        {id: 9, name: '志趣', isActive: false, linkTo: '/type/hobby'}
+        // {id: 1, name: '居家', isActive: false, linkTo: '/type/home'},
+        // {id: 2, name: '餐厨', isActive: false, linkTo: '/type/cook'},
+        // {id: 3, name: '配件', isActive: false, linkTo: '/type/parts'},
+        // {id: 4, name: '服装', isActive: false, linkTo: '/type/cloth'},
+        // {id: 5, name: '洗护', isActive: false, linkTo: '/type/wash'},
+        // {id: 6, name: '婴童', isActive: false, linkTo: '/type/baby'},
+        // {id: 7, name: '杂货', isActive: false, linkTo: '/type/messy'},
+        // {id: 8, name: '饮食', isActive: false, linkTo: '/type/drink'},
+        // {id: 9, name: '志趣', isActive: false, linkTo: '/type/hobby'}
   ],
   mylist: [
         {id: 0, name: '全部', isActive: true, linkTo: '/self/mylist'},
