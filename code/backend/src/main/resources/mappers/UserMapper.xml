@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xjtu.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.xjtu.pojo.User">
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="username" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="mainImage" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="subImages" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="sex" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="age" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="hometown" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="industry" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="online" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="guide" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="longitude" javaType="java.lang.Float" jdbcType="REAL" />
+      <arg column="latitude" javaType="java.lang.Float" jdbcType="REAL" />
+      <arg column="guideCount" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="rating" javaType="java.lang.Float" jdbcType="REAL" />
+      <arg column="personality" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="language" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="travel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="book" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="movie" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="music" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="food" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="sport" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="password" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="phone" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="device" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, username, mainImage, subImages, sex, age, hometown, industry, online, guide, 
+    longitude, latitude, guideCount, rating, personality, language, travel, book, movie, 
+    music, food, sport, password, phone, device, createTime, updateTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.xjtu.pojo.User">
+    insert into user (id, username, mainImage, 
+      subImages, sex, age, 
+      hometown, industry, online, 
+      guide, longitude, latitude, 
+      guideCount, rating, personality, 
+      language, travel, book, 
+      movie, music, food, 
+      sport, password, phone, 
+      device, createTime, updateTime
+      )
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{mainimage,jdbcType=VARCHAR}, 
+      #{subimages,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
+      #{hometown,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, #{online,jdbcType=INTEGER}, 
+      #{guide,jdbcType=INTEGER}, #{longitude,jdbcType=REAL}, #{latitude,jdbcType=REAL}, 
+      #{guidecount,jdbcType=INTEGER}, #{rating,jdbcType=REAL}, #{personality,jdbcType=VARCHAR}, 
+      #{language,jdbcType=VARCHAR}, #{travel,jdbcType=VARCHAR}, #{book,jdbcType=VARCHAR}, 
+      #{movie,jdbcType=VARCHAR}, #{music,jdbcType=VARCHAR}, #{food,jdbcType=VARCHAR}, 
+      #{sport,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{device,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xjtu.pojo.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="mainimage != null">
+        mainImage,
+      </if>
+      <if test="subimages != null">
+        subImages,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="hometown != null">
+        hometown,
+      </if>
+      <if test="industry != null">
+        industry,
+      </if>
+      <if test="online != null">
+        online,
+      </if>
+      <if test="guide != null">
+        guide,
+      </if>
+      <if test="longitude != null">
+        longitude,
+      </if>
+      <if test="latitude != null">
+        latitude,
+      </if>
+      <if test="guidecount != null">
+        guideCount,
+      </if>
+      <if test="rating != null">
+        rating,
+      </if>
+      <if test="personality != null">
+        personality,
+      </if>
+      <if test="language != null">
+        language,
+      </if>
+      <if test="travel != null">
+        travel,
+      </if>
+      <if test="book != null">
+        book,
+      </if>
+      <if test="movie != null">
+        movie,
+      </if>
+      <if test="music != null">
+        music,
+      </if>
+      <if test="food != null">
+        food,
+      </if>
+      <if test="sport != null">
+        sport,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="phone != null">
+        phone,
+      </if>
+      <if test="device != null">
+        device,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="mainimage != null">
+        #{mainimage,jdbcType=VARCHAR},
+      </if>
+      <if test="subimages != null">
+        #{subimages,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="hometown != null">
+        #{hometown,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="online != null">
+        #{online,jdbcType=INTEGER},
+      </if>
+      <if test="guide != null">
+        #{guide,jdbcType=INTEGER},
+      </if>
+      <if test="longitude != null">
+        #{longitude,jdbcType=REAL},
+      </if>
+      <if test="latitude != null">
+        #{latitude,jdbcType=REAL},
+      </if>
+      <if test="guidecount != null">
+        #{guidecount,jdbcType=INTEGER},
+      </if>
+      <if test="rating != null">
+        #{rating,jdbcType=REAL},
+      </if>
+      <if test="personality != null">
+        #{personality,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null">
+        #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="travel != null">
+        #{travel,jdbcType=VARCHAR},
+      </if>
+      <if test="book != null">
+        #{book,jdbcType=VARCHAR},
+      </if>
+      <if test="movie != null">
+        #{movie,jdbcType=VARCHAR},
+      </if>
+      <if test="music != null">
+        #{music,jdbcType=VARCHAR},
+      </if>
+      <if test="food != null">
+        #{food,jdbcType=VARCHAR},
+      </if>
+      <if test="sport != null">
+        #{sport,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="device != null">
+        #{device,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.xjtu.pojo.User">
+    update user
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="mainimage != null">
+        mainImage = #{mainimage,jdbcType=VARCHAR},
+      </if>
+      <if test="subimages != null">
+        subImages = #{subimages,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="hometown != null">
+        hometown = #{hometown,jdbcType=VARCHAR},
+      </if>
+      <if test="industry != null">
+        industry = #{industry,jdbcType=VARCHAR},
+      </if>
+      <if test="online != null">
+        online = #{online,jdbcType=INTEGER},
+      </if>
+      <if test="guide != null">
+        guide = #{guide,jdbcType=INTEGER},
+      </if>
+      <if test="longitude != null">
+        longitude = #{longitude,jdbcType=REAL},
+      </if>
+      <if test="latitude != null">
+        latitude = #{latitude,jdbcType=REAL},
+      </if>
+      <if test="guidecount != null">
+        guideCount = #{guidecount,jdbcType=INTEGER},
+      </if>
+      <if test="rating != null">
+        rating = #{rating,jdbcType=REAL},
+      </if>
+      <if test="personality != null">
+        personality = #{personality,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null">
+        language = #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="travel != null">
+        travel = #{travel,jdbcType=VARCHAR},
+      </if>
+      <if test="book != null">
+        book = #{book,jdbcType=VARCHAR},
+      </if>
+      <if test="movie != null">
+        movie = #{movie,jdbcType=VARCHAR},
+      </if>
+      <if test="music != null">
+        music = #{music,jdbcType=VARCHAR},
+      </if>
+      <if test="food != null">
+        food = #{food,jdbcType=VARCHAR},
+      </if>
+      <if test="sport != null">
+        sport = #{sport,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null">
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="device != null">
+        device = #{device,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.xjtu.pojo.User">
+    update user
+    set username = #{username,jdbcType=VARCHAR},
+      mainImage = #{mainimage,jdbcType=VARCHAR},
+      subImages = #{subimages,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      hometown = #{hometown,jdbcType=VARCHAR},
+      industry = #{industry,jdbcType=VARCHAR},
+      online = #{online,jdbcType=INTEGER},
+      guide = #{guide,jdbcType=INTEGER},
+      longitude = #{longitude,jdbcType=REAL},
+      latitude = #{latitude,jdbcType=REAL},
+      guideCount = #{guidecount,jdbcType=INTEGER},
+      rating = #{rating,jdbcType=REAL},
+      personality = #{personality,jdbcType=VARCHAR},
+      language = #{language,jdbcType=VARCHAR},
+      travel = #{travel,jdbcType=VARCHAR},
+      book = #{book,jdbcType=VARCHAR},
+      movie = #{movie,jdbcType=VARCHAR},
+      music = #{music,jdbcType=VARCHAR},
+      food = #{food,jdbcType=VARCHAR},
+      sport = #{sport,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      device = #{device,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = #{updatetime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="selectByPhone" resultType="int" parameterType="string">
+    SELECT
+    COUNT(1)
+    FROM user
+    WHERE phone = #{phone}
+  </select>
+
+  <select id="selectLogin" resultType="com.xjtu.pojo.User" parameterType="map">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM user
+    WHERE phone = #{phone}
+    and password = #{password}
+  </select>
+
+  <select id="selectByUsername" resultType="int" parameterType="string">
+    SELECT
+    COUNT(1)
+    FROM user
+    WHERE username = #{username}
+  </select>
+
+
+
+
+</mapper>

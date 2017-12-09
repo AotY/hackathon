@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xjtu.dao.EvaluationMapper">
+  <resultMap id="BaseResultMap" type="com.xjtu.pojo.Evaluation">
+    <constructor>
+      <arg column="fromUserId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="toUserId" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="evaluationLabel" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="evaluationText" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="rating" javaType="java.lang.Float" jdbcType="REAL" />
+      <arg column="mainImage" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="subImages" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <insert id="insert" parameterType="com.xjtu.pojo.Evaluation">
+    insert into evaluation (fromUserId, toUserId, evaluationLabel, 
+      evaluationText, rating, mainImage, 
+      subImages, createTime, updateTime
+      )
+    values (#{fromuserid,jdbcType=INTEGER}, #{touserid,jdbcType=INTEGER}, #{evaluationlabel,jdbcType=VARCHAR}, 
+      #{evaluationtext,jdbcType=VARCHAR}, #{rating,jdbcType=REAL}, #{mainimage,jdbcType=VARCHAR}, 
+      #{subimages,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.xjtu.pojo.Evaluation">
+    insert into evaluation
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fromuserid != null">
+        fromUserId,
+      </if>
+      <if test="touserid != null">
+        toUserId,
+      </if>
+      <if test="evaluationlabel != null">
+        evaluationLabel,
+      </if>
+      <if test="evaluationtext != null">
+        evaluationText,
+      </if>
+      <if test="rating != null">
+        rating,
+      </if>
+      <if test="mainimage != null">
+        mainImage,
+      </if>
+      <if test="subimages != null">
+        subImages,
+      </if>
+      <if test="createtime != null">
+        createTime,
+      </if>
+      <if test="updatetime != null">
+        updateTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fromuserid != null">
+        #{fromuserid,jdbcType=INTEGER},
+      </if>
+      <if test="touserid != null">
+        #{touserid,jdbcType=INTEGER},
+      </if>
+      <if test="evaluationlabel != null">
+        #{evaluationlabel,jdbcType=VARCHAR},
+      </if>
+      <if test="evaluationtext != null">
+        #{evaluationtext,jdbcType=VARCHAR},
+      </if>
+      <if test="rating != null">
+        #{rating,jdbcType=REAL},
+      </if>
+      <if test="mainimage != null">
+        #{mainimage,jdbcType=VARCHAR},
+      </if>
+      <if test="subimages != null">
+        #{subimages,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+</mapper>
