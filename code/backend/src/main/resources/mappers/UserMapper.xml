@@ -19,6 +19,7 @@
       <arg column="rating" javaType="java.lang.Float" jdbcType="REAL" />
       <arg column="personality" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="language" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="place" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="travel" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="book" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="movie" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -34,8 +35,8 @@
   </resultMap>
   <sql id="Base_Column_List">
     id, username, mainImage, subImages, sex, age, hometown, industry, online, guide, 
-    longitude, latitude, guideCount, rating, personality, language, travel, book, movie, 
-    music, food, sport, password, phone, device, createTime, updateTime
+    longitude, latitude, guideCount, rating, personality, language, place, travel, book, 
+    movie, music, food, sport, password, phone, device, createTime, updateTime
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -53,21 +54,20 @@
       hometown, industry, online, 
       guide, longitude, latitude, 
       guideCount, rating, personality, 
-      language, travel, book, 
-      movie, music, food, 
-      sport, password, phone, 
-      device, createTime, updateTime
-      )
+      language, place, travel, 
+      book, movie, music, 
+      food, sport, password, 
+      phone, device, createTime, 
+      updateTime)
     values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{mainimage,jdbcType=VARCHAR}, 
       #{subimages,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
       #{hometown,jdbcType=VARCHAR}, #{industry,jdbcType=VARCHAR}, #{online,jdbcType=INTEGER}, 
       #{guide,jdbcType=INTEGER}, #{longitude,jdbcType=REAL}, #{latitude,jdbcType=REAL}, 
       #{guidecount,jdbcType=INTEGER}, #{rating,jdbcType=REAL}, #{personality,jdbcType=VARCHAR}, 
-      #{language,jdbcType=VARCHAR}, #{travel,jdbcType=VARCHAR}, #{book,jdbcType=VARCHAR}, 
-      #{movie,jdbcType=VARCHAR}, #{music,jdbcType=VARCHAR}, #{food,jdbcType=VARCHAR}, 
-      #{sport,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
-      #{device,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
-      )
+      #{language,jdbcType=VARCHAR}, #{place,jdbcType=VARCHAR}, #{travel,jdbcType=VARCHAR}, 
+      #{book,jdbcType=VARCHAR}, #{movie,jdbcType=VARCHAR}, #{music,jdbcType=VARCHAR}, 
+      #{food,jdbcType=VARCHAR}, #{sport,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{device,jdbcType=VARCHAR}, now(), now())
   </insert>
   <insert id="insertSelective" parameterType="com.xjtu.pojo.User">
     insert into user
@@ -119,6 +119,9 @@
       </if>
       <if test="language != null">
         language,
+      </if>
+      <if test="place != null">
+        place,
       </if>
       <if test="travel != null">
         travel,
@@ -203,6 +206,9 @@
       <if test="language != null">
         #{language,jdbcType=VARCHAR},
       </if>
+      <if test="place != null">
+        #{place,jdbcType=VARCHAR},
+      </if>
       <if test="travel != null">
         #{travel,jdbcType=VARCHAR},
       </if>
@@ -231,10 +237,10 @@
         #{device,jdbcType=VARCHAR},
       </if>
       <if test="createtime != null">
-        #{createtime,jdbcType=TIMESTAMP},
+        now(),
       </if>
       <if test="updatetime != null">
-        #{updatetime,jdbcType=TIMESTAMP},
+        now(),
       </if>
     </trim>
   </insert>
@@ -286,6 +292,9 @@
       <if test="language != null">
         language = #{language,jdbcType=VARCHAR},
       </if>
+      <if test="place != null">
+        place = #{place,jdbcType=VARCHAR},
+      </if>
       <if test="travel != null">
         travel = #{travel,jdbcType=VARCHAR},
       </if>
@@ -317,7 +326,7 @@
         createTime = #{createtime,jdbcType=TIMESTAMP},
       </if>
       <if test="updatetime != null">
-        updateTime = #{updatetime,jdbcType=TIMESTAMP},
+        updateTime = now(),
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -339,6 +348,7 @@
       rating = #{rating,jdbcType=REAL},
       personality = #{personality,jdbcType=VARCHAR},
       language = #{language,jdbcType=VARCHAR},
+      place = #{place,jdbcType=VARCHAR},
       travel = #{travel,jdbcType=VARCHAR},
       book = #{book,jdbcType=VARCHAR},
       movie = #{movie,jdbcType=VARCHAR},
@@ -349,10 +359,9 @@
       phone = #{phone,jdbcType=VARCHAR},
       device = #{device,jdbcType=VARCHAR},
       createTime = #{createtime,jdbcType=TIMESTAMP},
-      updateTime = #{updatetime,jdbcType=TIMESTAMP}
+      updateTime = now()
     where id = #{id,jdbcType=INTEGER}
   </update>
-
 
   <select id="selectByPhone" resultType="int" parameterType="string">
     SELECT
@@ -376,7 +385,10 @@
     WHERE username = #{username}
   </select>
 
-
-
+  <select id="selectList" resultType="com.xjtu.pojo.User">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM user
+  </select>
 
 </mapper>

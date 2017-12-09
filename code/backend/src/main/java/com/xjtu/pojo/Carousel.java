@@ -9,16 +9,16 @@ public class Carousel {
 
     private String image;
 
-    private Date createTime;
+    private Date createtime;
 
-    private Date updateTime;
+    private Date updatetime;
 
-    public Carousel(Integer id, String keyword, String image, Date createTime, Date updateTime) {
+    public Carousel(Integer id, String keyword, String image, Date createtime, Date updatetime) {
         this.id = id;
         this.keyword = keyword;
         this.image = image;
-        this.createTime = createTime;
-        this.updateTime = updateTime;
+        this.createtime = createtime;
+        this.updatetime = updatetime;
     }
 
     public Carousel() {
@@ -49,19 +49,19 @@ public class Carousel {
         this.image = image == null ? null : image.trim();
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public Date getUpdatetime() {
+        return updatetime;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setUpdatetime(Date updatetime) {
+        this.updatetime = updatetime;
     }
 }

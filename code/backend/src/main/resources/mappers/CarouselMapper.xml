@@ -6,12 +6,12 @@
       <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
       <arg column="keyword" javaType="java.lang.String" jdbcType="VARCHAR" />
       <arg column="image" javaType="java.lang.String" jdbcType="VARCHAR" />
-      <arg column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
-      <arg column="update_time" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+      <arg column="updateTime" javaType="java.util.Date" jdbcType="TIMESTAMP" />
     </constructor>
   </resultMap>
   <sql id="Base_Column_List">
-    id, keyword, image, create_time, update_time
+    id, keyword, image, createTime, updateTime
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -25,9 +25,9 @@
   </delete>
   <insert id="insert" parameterType="com.xjtu.pojo.Carousel">
     insert into carousel (id, keyword, image, 
-      create_time, update_time)
+      createTime, updateTime)
     values (#{id,jdbcType=INTEGER}, #{keyword,jdbcType=VARCHAR}, #{image,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+      now(), now())
   </insert>
   <insert id="insertSelective" parameterType="com.xjtu.pojo.Carousel">
     insert into carousel
@@ -41,11 +41,11 @@
       <if test="image != null">
         image,
       </if>
-      <if test="createTime != null">
-        create_time,
+      <if test="createtime != null">
+        createTime,
       </if>
-      <if test="updateTime != null">
-        update_time,
+      <if test="updatetime != null">
+        updateTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -58,11 +58,11 @@
       <if test="image != null">
         #{image,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null">
-        #{updateTime,jdbcType=TIMESTAMP},
+      <if test="updatetime != null">
+        now(),
       </if>
     </trim>
   </insert>
@@ -75,11 +75,11 @@
       <if test="image != null">
         image = #{image,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null">
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="createtime != null">
+        createTime = #{createtime,jdbcType=TIMESTAMP},
       </if>
-      <if test="updateTime != null">
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      <if test="updatetime != null">
+        updateTime = now(),
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -88,8 +88,14 @@
     update carousel
     set keyword = #{keyword,jdbcType=VARCHAR},
       image = #{image,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      update_time = #{updateTime,jdbcType=TIMESTAMP}
+      createTime = #{createtime,jdbcType=TIMESTAMP},
+      updateTime = now()
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="selectList" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM carousel
+  </select>
 </mapper>

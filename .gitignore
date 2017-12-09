@@ -9,7 +9,7 @@ target/springboot_vue-0.0.1-SNAPSHOT.jar.original
 
 .DS_Store
 
-ftpfile/
+ftpfile
 
 !.mvn/wrapper/maven-wrapper.jar
 

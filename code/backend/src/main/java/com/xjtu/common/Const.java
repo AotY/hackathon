@@ -13,7 +13,7 @@ public class Const {
     public static final int ONLINE = 1;  //是否在线
     public static final int OFFLINE = 0;
     public static final int GUIDE = 1;  //是否处于向导状态
-    public static final int NO_GUIDe = 0;
+    public static final int NO_GUIDE = 0;
     public static final String PHONE = "phone";
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";

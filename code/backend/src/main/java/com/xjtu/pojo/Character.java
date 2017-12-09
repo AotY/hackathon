@@ -2,26 +2,26 @@ package com.xjtu.pojo;
 
 import java.util.Date;
 
-public class Keyword {
+public class Character {
     private Integer id;
 
-    private String keyword;
+    private String label;
 
-    private Integer count;
+    private String type;
 
     private Date createtime;
 
     private Date updatetime;
 
-    public Keyword(Integer id, String keyword, Integer count, Date createtime, Date updatetime) {
+    public Character(Integer id, String label, String type, Date createtime, Date updatetime) {
         this.id = id;
-        this.keyword = keyword;
-        this.count = count;
+        this.label = label;
+        this.type = type;
         this.createtime = createtime;
         this.updatetime = updatetime;
     }
 
-    public Keyword() {
+    public Character() {
         super();
     }
 
@@ -33,20 +33,20 @@ public class Keyword {
         this.id = id;
     }
 
-    public String getKeyword() {
-        return keyword;
+    public String getLabel() {
+        return label;
     }
 
-    public void setKeyword(String keyword) {
-        this.keyword = keyword == null ? null : keyword.trim();
+    public void setLabel(String label) {
+        this.label = label == null ? null : label.trim();
     }
 
-    public Integer getCount() {
-        return count;
+    public String getType() {
+        return type;
     }
 
-    public void setCount(Integer count) {
-        this.count = count;
+    public void setType(String type) {
+        this.type = type == null ? null : type.trim();
     }
 
     public Date getCreatetime() {

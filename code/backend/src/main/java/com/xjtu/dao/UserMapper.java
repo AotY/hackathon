@@ -3,6 +3,8 @@ package com.xjtu.dao;
 import com.xjtu.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -21,4 +23,6 @@ public interface UserMapper {
     int selectByUsername(String username);
 
     User selectLogin(@Param("phone") String phone, @Param("password") String password);
+
+    List<User> selectList();
 }

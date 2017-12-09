@@ -2,6 +2,8 @@ package com.xjtu.dao;
 
 import com.xjtu.pojo.Keyword;
 
+import java.util.List;
+
 public interface KeywordMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface KeywordMapper {
     int updateByPrimaryKeySelective(Keyword record);
 
     int updateByPrimaryKey(Keyword record);
+
+    List<String> selectByLimit(Integer count);
 }

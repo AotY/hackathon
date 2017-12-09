@@ -88,13 +88,21 @@
         <!--</table>-->
 
 
-        <table tableName="carousel" domainObjectName="Carousel" enableCountByExample="false"
-        enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-        selectByExampleQueryId="false"></table>
+        <!--<table tableName="carousel" domainObjectName="Carousel" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false"></table>-->
 
-        <table tableName="keyword" domainObjectName="Keyword" enableCountByExample="false"
-        enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-        selectByExampleQueryId="false"></table>
+        <!--<table tableName="keyword" domainObjectName="Keyword" enableCountByExample="false"-->
+        <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+        <!--selectByExampleQueryId="false"></table>-->
+
+        <!--<table tableName="history" domainObjectName="History" enableCountByExample="false"-->
+               <!--enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+
+        <table tableName="character" domainObjectName="Character" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false"></table>
 
     </context>
 </generatorConfiguration>
