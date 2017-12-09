@@ -13,11 +13,15 @@ import footclassification from './modules/footclassification'
 import shopCart from './modules/shopCart'
 import order from './modules/order'
 import mylist from './modules/mylists'
+// zbw
+import infos from './modules/infos'
+
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   modules: {
+    infos,
     user,
     footer,
     home,

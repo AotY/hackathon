@@ -10,6 +10,7 @@
     </div>
 </template>
 <script>
+//登录，注册
 export default {
   name: 'index',
   data () {
@@ -52,8 +53,8 @@ export default {
     font-weight: normal;
   background-color: #fff;
   height: 1.28rem;
-    
-   
+
+
 }
 .email::after, .password::after{
   position: absolute;

@@ -3,7 +3,7 @@
       <div class="inner" >
         <div class="list" >
           <div class="list-container">
-          <div class="tab" 
+          <div class="tab"
             :class="{active: item.isActive}"
             v-for="item in tabs" :key="item.id">
             <router-link :to="item.linkTo">
@@ -17,6 +17,9 @@
 </template>
 
 <script>
+/**
+ * 1.tabs，容纳数据，捕捉被点击 选项
+ */
 export default {
   props: ['tabs'],
   data () {
@@ -78,7 +81,7 @@ header {
   flex-shrink: 0;
   padding: 0 .4rem;
   overflow: scroll;
-  
+
 }
 ::-webkit-scrollbar
 {

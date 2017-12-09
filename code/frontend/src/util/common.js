@@ -6,7 +6,11 @@ export default {
   // 获取
   getLocal (key = STORAGE_USER_KEY) {
     console.log('get local operation')
-    return JSON.parse(window.localStorage.getItem(key))
+    // console.log(JSON.parse(window.localStorage.getItem(key)))
+    // return JSON.parse(window.localStorage.getItem(key))
+    // zbw
+    // return JSON.parse(window.localStorage.getItem(key))
+    return false
   },
   // 设置用
   setLocal (res, key = STORAGE_USER_KEY, isSaveOldData = false) {

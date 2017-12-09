@@ -1,0 +1,1541 @@
+
+> netease-yanxuan@1.0.0 dev /Users/ZhangBowei/Code/js/hackathon/code/frontend
+> node build/dev-server.js
+
+> Starting dev server...
+ ERROR  Failed to compile with 78 errors22:43:48
+
+ error  in ./src/main.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/main.js:3:1
+  import Vue from 'vue'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/store.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/store.js:1:1
+  import Vue from 'vue'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/main.js 13:0-33
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/router/index.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/router/index.js:1:1
+  import Vue from 'vue'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/main.js 4:0-30
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/headertabs.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/headertabs.js:6:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 7:0-46
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/cook.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/cook.js:1:1
+  import { Indicator } from 'mint-ui'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 9:0-34
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/footer.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/footer.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 5:0-38
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/home.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/home.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 8:0-34
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/user.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/user.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 4:0-34
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/type.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/type.js:1:1
+  import { Indicator } from 'mint-ui'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 10:0-34
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/footclassification.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/footclassification.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 12:0-62
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/shopCart.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/shopCart.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 13:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/order.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/order.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 14:0-36
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/infos.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/infos.js:6:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 17:0-36
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/modules/mylists.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/modules/mylists.js:1:1
+  import * as types from '../types'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/store.js 15:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/App.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/App.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/main.js 3:0-24
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/vuex/types.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'export' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/vuex/types.js:2:1
+  export const SET_USER = 'SET_LOGIN_STATUS' // 设置登录状态
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/modules/headertabs.js 5:0-34
+ @ ./src/vuex/store.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/util/common.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'const' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/util/common.js:1:1
+  const STORAGE_USER_KEY = 'STORAGE_USER_KEY'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/modules/user.js 3:0-37
+ @ ./src/vuex/store.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/fetch/api.js
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: The keyword 'import' is reserved  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/fetch/api.js:1:1
+  import axios from 'axios'
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/vuex/modules/cook.js 7:0-31
+ @ ./src/vuex/store.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/recommend.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/recommend.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 5:0-47
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/index.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/index.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 4:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/limit.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/limit.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 6:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/home.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/home.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 7:0-37
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/cook.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/cook.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 8:0-37
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/parts.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/parts.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 9:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/cloth.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/cloth.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 10:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/wash.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/wash.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 11:0-37
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/messy.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/messy.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 13:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/baby.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/baby.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 12:0-37
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/drink.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/drink.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 14:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/index/hobby.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/index/hobby.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 15:0-39
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/special/index.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/special/index.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 17:0-48
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/index.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/index.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 19:0-37
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/recommend.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/recommend.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 20:0-50
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/cook.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/cook.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 22:0-40
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/home.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/home.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 21:0-40
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/part.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/part.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 23:0-41
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/cloth.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/cloth.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 24:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/wash.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/wash.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 25:0-40
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/baby.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/baby.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 26:0-40
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/messy.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/messy.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 27:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/drink.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/drink.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 28:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/hobby.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/hobby.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 29:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/shopcart/index.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/shopcart/index.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 31:0-50
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/selfcenter/index.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/selfcenter/index.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 33:0-48
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/MyList.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/MyList.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 34:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/MyListAll.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/MyListAll.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 35:0-48
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/MylistNotpay.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/MylistNotpay.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 36:0-54
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/MylistNotsend.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/MylistNotsend.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 37:0-56
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/MylistSend.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/MylistSend.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 38:0-50
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/index.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/index.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 40:0-45
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/goodsDetails.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/goodsDetails.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 41:0-55
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/goodsSelect.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/goodsSelect.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 42:0-55
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/search/search.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/search/search.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./src/router/index.js 44:0-42
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/shopcart/buyordel.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/shopcart/buyordel.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/shopcart/index.vue 7:0-36
+ @ ./src/page/shopcart/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/type/eachtype.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/type/eachtype.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/type/recommend.vue 3:0-34
+ @ ./src/page/type/recommend.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/shopcart/swipeDelete.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/shopcart/swipeDelete.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/shopcart/index.vue 6:0-40
+ @ ./src/page/shopcart/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/selfcenter/requireLogin.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/selfcenter/requireLogin.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/selfcenter/index.vue 6:0-42
+ @ ./src/page/selfcenter/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/selfcenter/showInfo.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/selfcenter/showInfo.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/selfcenter/index.vue 7:0-34
+ @ ./src/page/selfcenter/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/eachList.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/eachList.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/mylist/MyListAll.vue 3:0-34
+ @ ./src/page/mylist/MyListAll.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/mylist/NoList.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/mylist/NoList.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/mylist/MyListAll.vue 2:0-30
+ @ ./src/page/mylist/MyListAll.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/cartFooter.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/cartFooter.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/showgoods/index.vue 5:0-38
+ @ ./src/page/showgoods/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/goodsComment.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/goodsComment.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/showgoods/goodsDetails.vue 4:0-42
+ @ ./src/page/showgoods/goodsDetails.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/goodsAttr.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/goodsAttr.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/showgoods/goodsDetails.vue 5:0-36
+ @ ./src/page/showgoods/goodsDetails.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/goodsService.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/goodsService.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/showgoods/goodsDetails.vue 6:0-42
+ @ ./src/page/showgoods/goodsDetails.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/page/showgoods/goodsInfo.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/page/showgoods/goodsInfo.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/showgoods/goodsDetails.vue 7:0-36
+ @ ./src/page/showgoods/goodsDetails.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/GoodsGrid.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/GoodsGrid.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/recommend.vue 3:0-58
+ @ ./src/page/index/recommend.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/NoLoopSwiper.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/NoLoopSwiper.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/recommend.vue 4:0-60
+ @ ./src/page/index/recommend.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/DealPromise.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/DealPromise.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/recommend.vue 5:0-58
+ @ ./src/page/index/recommend.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/cell.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/cell.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/recommend.vue 6:0-44
+ @ ./src/page/index/recommend.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/Header.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/Header.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/index.vue 3:0-48
+ @ ./src/page/index/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/Footer.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/Footer.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/index.vue 4:0-48
+ @ ./src/page/index/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/Tabs.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/Tabs.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/index.vue 5:0-49
+ @ ./src/page/index/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/GoTop.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/GoTop.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/index.vue 6:0-46
+ @ ./src/page/index/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/EachTab.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/EachTab.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/index/home.vue 4:0-50
+ @ ./src/page/index/home.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/EachSuggest.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/EachSuggest.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/special/index.vue 6:0-58
+ @ ./src/page/special/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/ShopHeader.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/ShopHeader.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/shopcart/index.vue 5:0-56
+ @ ./src/page/shopcart/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/HeaderBar.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/HeaderBar.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/selfcenter/index.vue 5:0-51
+ @ ./src/page/selfcenter/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+ error  in ./src/components/public/Labels.vue
+
+
+  ✘  http://eslint.org/docs/rules/  Parsing error: Unexpected token <  
+  /Users/ZhangBowei/Code/js/hackathon/code/frontend/src/components/public/Labels.vue:1:1
+  <template>
+   ^
+
+
+✘ 1 problem (1 error, 0 warnings)
+
+
+Errors:
+  1  http://eslint.org/docs/rules/null
+
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/selfcenter/showInfo.vue 4:0-53
+ @ ./src/page/selfcenter/showInfo.vue
+ @ ./~/babel-loader/lib!./~/vue-loader/lib/selector.js?type=script&index=0!./src/page/selfcenter/index.vue
+ @ ./src/page/selfcenter/index.vue
+ @ ./src/router/index.js
+ @ ./src/main.js
+ @ multi ./build/dev-client ./src/main.js
+
+> Listening at http://localhost:8080
+

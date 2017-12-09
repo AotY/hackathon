@@ -1,3 +1,8 @@
+/**
+ * 1. 提供所有tab 链接跳转数据。
+ * 2. 提供函数 控制激活的class
+ */
+
 import * as types from '../types'
 const state = {
   headertabList: [
