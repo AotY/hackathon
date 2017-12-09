@@ -16,7 +16,7 @@
     <div class="g-row">
       <div class="m-uMenu" >
         <index-labels :labels="labels" class="list clearfix"></index-labels>
-        <ul class="list clearfix" >
+        <!-- <ul class="list clearfix" >
           <li class="item" >
             <router-link class="m-uMenuItem" to="self/mylist" title="我的订单" ><i class="img u-icon u-icon-ulist" ></i><span class="txt" >我的订单</span></router-link>
           </li>
@@ -53,7 +53,7 @@
           <li class="item item-bottom" >
             <a class="m-uMenuItem" href="/feedback" title="意见反馈" ><i class="img u-icon u-icon-ufeedback" ></i><span class="txt" >意见反馈</span></a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </div>
     <div class="g-row"></div>

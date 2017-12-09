@@ -4,17 +4,17 @@
       <div class="row">
         <div class="m-hamburger toggle" :class='{active: isActive}' @click="toggleMenu"></div>
         <router-link to="/">
-          <i class="logo u-icon u-icon-logo"></i>
+          <!-- <i class="logo u-icon u-icon-logo"></i> -->
         </router-link>
         <div class="right">
           <router-link to="/search" class="search">
             <i class="u-icon u-icon-search1"></i>
           </router-link>
-          <router-link to="/shopcart" class="cart">
+          <!-- <router-link to="/shopcart" class="cart">
             <i class="u-icon u-icon-cart">
               <span class="cart-tip" v-show="allNum!=0">{{allNum}}</span>
             </i>
-          </router-link>
+          </router-link> -->
         </div>
       </div>
         <!--隐藏菜单的推荐-->
@@ -71,12 +71,12 @@ export default {
   .m-topBar .bd {
     position: relative;
   }
-  
+
   .m-topBar .bd {
     height: 1.16rem;
     background-color: #fafafa;
   }
-  
+
   .bd .row {
     background-color: #fafafa;
     z-index: 999;
@@ -92,7 +92,7 @@ export default {
     justify-content: space-between;
     position: fixed;
   }
-  
+
   .m-hamburger {
     background-position: 0 -3.38667rem;
   }
@@ -115,16 +115,16 @@ export default {
     margin-left: auto;
     margin-right: .06667rem;
   }
-  
+
   .m-topBar .bd .row .search {
     margin-right: .26667rem;
   }
-  
+
   .m-topBar .bd .row .search .u-icon-search1 {
     position: relative;
     bottom: 0;
   }
-  
+
   .u-icon-search1 {
     display: inline-block;
     vertical-align: middle;
@@ -135,7 +135,7 @@ export default {
     height: .85333rem;
     background-position: 0 -7.65333rem;
   }
-  
+
   .u-icon-cart {
     display: inline-block;
     vertical-align: middle;
@@ -147,7 +147,7 @@ export default {
     background-position: 0 0;
     position: relative;
   }
-  
+
   .m-topBar .bd .row .logo {
     position: absolute;
     top: 0;
@@ -156,7 +156,7 @@ export default {
     left: 0;
     margin: auto;
   }
-  
+
   .u-icon-logo {
     display: inline-block;
     vertical-align: middle;
